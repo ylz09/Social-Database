@@ -1,0 +1,120 @@
+insert into user (user_id, nickname,gender,region) values 
+(6,'user6','male','newark'),
+(7,'user7','female','dover'),
+(8,'user8','male','newark'),
+(9,'user9','female','dover'),
+(10,'user10','male','newark'),
+(11,'user11','female','dover'),
+(12,'user12','male','newark'),
+(13,'user13','female','dover'),
+(14,'user14','male','newark'),
+(15,'user15','female','dover'),
+(16,'user16','male','newark'),
+(17,'user17','female','dover'),
+(18,'user18','male','newark'),
+(19,'user19','female','dover'),
+(20,'user20','male','newark'),
+(21,'user21','female','dover'),
+(22,'user22','male','newark'),
+(23,'user23','female','dover'),
+(24,'user24','male','newark'),
+(25,'user25','female','dover');
+
+alter table likes modify column like_time date;
+alter table comment modify column comment_time date;
+alter table moment modify column post_time date;
+
+insert into comment (com_index,mom_index, user_id, content, comment_time) values
+(3,3,2,'this is a comment!',curdate()), 
+(4,4,3,'this is a comment!',curdate()),
+(5,5,12,'this is a comment!',curdate()), 
+(6,6,3,'this is a comment!',curdate()),
+(7,10,12,'this is a comment!',curdate()), 
+(8,11,4,'this is a comment!',curdate()),
+(9,12,6,'this is a comment!',curdate()), 
+(10,14,8,'this is a comment!',curdate()),
+(11,16,13,'this is a comment!',curdate()), 
+(12,15,15,'this is a comment!',curdate()),
+(13,16,17,'this is a comment!',curdate()), 
+(14,17,15,'this is a comment!',curdate()),
+(15,8,2,'this is a comment!',curdate()), 
+(16,9,13,'this is a comment!',curdate()),
+(17,10,2,'this is a comment!',curdate()), 
+(18,11,11,'this is a comment!',curdate()),
+(19,12,15,'this is a comment!',curdate()), 
+(20,15,10,'this is a comment!',curdate()),
+(21,16,2,'this is a comment!',curdate()), 
+(22,14,3,'this is a comment!',curdate());
+
+insert into comment (com_index,mom_index, user_id, content, comment_time) values
+(1,3,2,'Today is new year!',curdate()), 
+(2,2,3,'I wanna play badminton!',curdate());
+
+
+insert into moment (mom_index,user_id, content, post_time) values
+(5,2,'my name is yiqun',curdate()),
+(6,2,'I like database!',curdate()),
+(7,2,'I am a single boy',curdate()),
+(8,2,'good morning',curdate()),
+(9,2,'final is comming...',curdate());
+
+insert into moment (mom_index,user_id, content, post_time) values
+(10,3,'do you like lindan',curdate()),
+(11,3,'I have two gold',curdate()),
+(12,3,'I hate chen long',curdate()),
+(13,3,'I love lee chong',curdate()),
+(14,3,'I love women',curdate()),
+(15,3,'are you my fans?',curdate()),
+(16,3,'tokoyo olympic ...',curdate()),
+(17,3,'age is not a problem',curdate()),
+(18,3,'lindan is greatest',curdate()),
+(19,3,'to the end of world',curdate());
+
+insert into moment (mom_index,user_id, content, post_time) values
+(20,4,'i am president of us!!',curdate()),
+(21,4,'trump is best',curdate()),
+(22,4,'vote for me!',curdate()),
+(23,4,'make america great1',curdate()),
+(24,4,'great again!',curdate()),
+(25,4,'build a mexical wall!',curdate()),
+(26,4,'trump trump haha!',curdate()),
+(27,4,'my daughter is my boss',curdate()),
+(28,4,'i do not blame china',curdate()),
+(29,4,'welcome to trump building in new york!',curdate()),
+
+(30,5,'xishi is most beatiful woman!',curdate()),
+(31,5,'i am xishi',curdate()),
+(32,5,'i am dead',curdate()),
+(33,5,'i love lvbu',curdate()),
+(34,5,'i am beautify',curdate()),
+(35,5,'do you love me?',curdate()),
+(36,5,'i hate dongzhuo',curdate()),
+(37,5,'men are liar',curdate()),
+(38,5,'war make me famous',curdate()),
+(39,5,'i love wars!!',curdate()),
+
+delete from moment where mom_index = 40;
+delete from moment where mom_index = 41;
+delete from moment where mom_index = 42;
+delete from moment where mom_index = 43;
+delete from moment where mom_index = 44;
+delete from moment where mom_index = 45;
+delete from moment where mom_index = 46;
+
+insert into moment (mom_index,user_id, content, post_time) values
+(40,6,'i am ta of database!',curdate()),
+(41,6,'database is neccessary',curdate()),
+(42,6,'databaes is useful',curdate()),
+(43,6,'your project is pretty good',curdate()),
+(44,6,'i like your project',curdate()),
+(45,6,'you are the best',curdate()),
+(46,6,'wonderful project!',curdate());
+
+insert into likes(like_index,mom_index,user_id,like_time) values
+(15,2,2,curdate()),
+(16,3,2,curdate()),
+(17,4,3,curdate()),
+(18,5,3,curdate()),
+(19,6,4,curdate()),
+(20,6,4,curdate()),
+(21,7,5,curdate());
