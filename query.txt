@@ -1,0 +1,103 @@
+1 user's publication:
+select content from moment, user where nickname='lizhou' and moment.user_id= user.user_id;
+select content,post_time from moment, user where nickname='lizhou' and moment.user_id= user.user_id;
+
+
+2 user's like wechat list: show content and author
+select moment.content, nickname
+from moment natural join user
+where moment.mom_index in
+(select moment.mom_index from likes, moment,user where user.nickname='yiqun' and user.user_id = likes.user_id and likes.mom_index= moment.mom_index);
+
+3 show_user_comment: a user's comment history
+select content, comment_time from comment, user where nickname='%s' and comment.user_id= user.user_id
+select content, comment_time from comment, user where nickname='lindan' and comment.user_id= user.user_id
+
+show all the moments:
+select content, nickname, post_time from moment, user where user.user_id=moment.user_id;
+
+
+who likes me mean like my wechat?
+
+select nickname from user
+where user_id in (
+select distinct likes.user_id 
+from likes,moment,user
+where nickname='lizhou' and likes.mom_index = moment.mom_index and moment.user_id = user.user_id);
+
+show_all_comments
+select content,nickname,comment_time
+from comment,user
+where comment.user_id = user.user_id;
+//select content,nickname,comment_time from comment,user where comment.user_id = user.user_id;
+
+4 A moment's all likes:
+select nickname
+from moment,likes,user
+where moment.content='.' and moment.mom_index=likes.mom_index and likes.user_id = user.user_id;
+//select nickname from moment,likes,user where moment.content='.' and moment.mom_index=likes.mom_index and likes.user_id = user.user_id;
+
+
+5 A moment's all comments:
+select comment.content, nickname,comment_time
+from comment,moment,user
+where moment.content='universe begins from a . ' and moment.mom_index=comment.mom_index and comment.user_id = user.user_id;
+//select comment.content, nickname,comment_time from comment,moment,user where moment.content='. ' and moment.mom_index=comment.mom_index and comment.user_id = user.user_id;
+
+
+
+date related query:
+
+administritor mode:
+A Second application should be created for supporting updates and modification to the database by
+privileged users: Adding/Deleting/Changing records in the database (i.e. creating or modifying a
+new movie entry or a new book entry). 
+
+adding:
+-------------------------------------------------------
+insert a moment:
+first find the max index of current table;
+mid = select max(mom_index) from moment;
+uid = select max(mom_index),max(user_id) from user;
+
+insert a user;
+finished
+
+insert a like;
+finished!
+
+
+insert a comment;
+
+changing:
+-------------------------------------------------------
+rename
+finished
+update user set nickname='God' where user_id=7;
+
+
+deleting:
+-------------------------------------------------------
+delete_like
+delete_wechat
+delete_user
+delete_comment
+
+delete_user:
+DELETE FROM tutorials_tbl WHERE tutorial_id=3;
+delete from user where user_id='
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
