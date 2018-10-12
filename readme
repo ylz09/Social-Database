@@ -1,5 +1,17 @@
 # SocialDatabase
 --------------------------------------------------
+ =================================================\
+#                                                 #
+#               WELCOME TO SDB!                   #
+#              (Social DataBase)                  #
+#                                                 #
+ =================================================\
+#                 We support:                     #
+#             $1. User mode                       #
+#             $2. Administritor mode              #
+#                                                 #
+ =================================================\
+       
 The goal of this project is to model the user posts and comments in a social network using mysql
 
 Run the ./a.out one the sever.

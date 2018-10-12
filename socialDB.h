@@ -264,13 +264,7 @@
         }
         //printf("%s's like list:\n");
         user_like_what(sock,name);
-        //printf("These people like [%s]:\n",mom);
-        //while (row = mysql_fetch_row(res)) {
-        //    printf("-> %s \n",row[0]);
-        //    //int cnt=0;
-        //    //while(row[cnt] != NULL) {printf("      %s\n",row[cnt]);cnt++;}
-        //}
-        //printf("\n");
+        
     }
     void insert_moment(MYSQL *sock){
         char qbuffer[200];
@@ -310,13 +304,7 @@
             exit(1);
         }
         printf("inserted success!\n");
-        //printf("These people like [%s]:\n",mom);
-        //while (row = mysql_fetch_row(res)) {
-        //    printf("-> %s \n",row[0]);
-        //    //int cnt=0;
-        //    //while(row[cnt] != NULL) {printf("      %s\n",row[cnt]);cnt++;}
-        //}
-        //printf("\n");
+
     }
 
     void test(MYSQL *sock)
