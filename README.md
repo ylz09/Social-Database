@@ -1,11 +1,11 @@
 # SocialDatabase
-The goal of this project is to model the user posts and comments in a social network using mysql &amp; c
+The goal of this project is to model the user posts and comments in a social network using mysql
 
 Run the ./a.out one the serer.
 
 We support: 
- $1. User mode 
- $2. Administritor mode  
+1. User mode 
+2. Administritor mode  
 Choose user mode(1 user mode, 2 admin mode)
 
 user mode:

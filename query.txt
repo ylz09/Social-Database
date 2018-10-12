@@ -87,17 +87,3 @@ delete_user:
 DELETE FROM tutorials_tbl WHERE tutorial_id=3;
 delete from user where user_id='
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
